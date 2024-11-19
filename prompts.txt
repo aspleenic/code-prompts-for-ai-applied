@@ -1,0 +1,61 @@
+Code Prompts for AI Applied
+
+Example 1 part 1:
+
+Summarize the main points of the following code snippet:
+
+def merge (*args, missing_val = None):
+	max_length = max([len(lst) for lst in args])
+	outList = []
+	for i in range (max_length)
+		result.append([args[k],[i] if i < len (args[k]) else missing_val for k in range (len(args))])
+	return outList
+
+
+Example 1 part 2:
+
+Summarize the main points of the following code class:
+
+class StringConcatenator:
+    def __init__(self, base_string="Hello"):
+        self.base_string = base_string
+
+    def concatenate(self, user_input):
+        return self.base_string + " " + user_input
+
+concat = StringConcatenator()
+user_input = input("Enter a string: ")
+result = concat.concatenate(user_input)
+print("Concatenated string:", result)
+
+
+Example 2:
+
+Generate a function to concatenate any number of strings input by the user. Use the Elixir programming language.
+
+
+Example 3: 
+As a developer, generate a Ruby class to model logging into a website.
+
+Example 4:
+Complete this code snippet
+
+const isEmptyValue = (value) =>
+  value === null || value === undefined || Number.isNaN(value);
+
+const serializeValue = (value, delimiter = ',') => {
+  if (isEmptyValue(value)) return "";
+  value = `${value}`;
+  if (
+    value.includes(delimiter) ||
+    value.includes('\n') ||
+    value.includes('"')
+  ) {
+    return `"${value.replace(/"/g, '""').replace(/\n/g, '\\n')}"`; // Escape double quotes and newlines
+  }
+  return value;
+};
+
+const serializeRow = (row, delimiter = ',') =>
+  row.map((value) => serializeValue(value, delimiter)).join(delimiter);
+
